@@ -68,27 +68,15 @@
 <body>
       <!-- NAVBAR-->
         <nav class="container navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar sasha" id="menu"> <!-- id menu -->
-            
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="btn-iconGreyOlive m-1 mr-3" href="#aboutus">AboutUs<span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn-iconGreyOlive m-1 mr-3" href="#team">Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn-iconGreyOlive m-1 mr-3" href="#gallery">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="btn-iconGreyOlive m-1 mr-3" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                <a class="btn-iconGreyOlive m-2" href="#aboutus">AboutUs<span class="sr-only">(current)</span></a>
+                <a class="btn-iconGreyOlive m-2" href="#team">Team</a>
+                <a class="btn-iconGreyOlive m-2" href="#gallery">Gallery</a>
+                <a class="btn-iconGreyOlive m-2" href="#contact">Contact</a>   
+            </div>
         </nav>
     <!-- /navbar -->
 
@@ -105,7 +93,7 @@
 <!-- ABOUT US -->
 <div class="container" id="aboutus"> <!-- id aboutus -->
     <div class="row">
-        <div class="col-md-6 col-sm-6 mb-3">
+        <div class="col-md-6 col-sm-6 mb-3 flex-center flex-column">
             <div class="view">
                 <img src="img/2000.jpg" class="img-fluid" alt="">
                 <div class="mask d-flex justify-content-center">
@@ -120,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6 col-sm-6 mb-3">
+        <div class="col-md-6 col-sm-6 mb-3 flex-center flex-column">
             <div class="view hm-white-strong">
                 <img src="img/2000.jpg" class="img-fluid" alt="">
                 <div class="mask flex-center flex-column">
@@ -399,7 +387,7 @@
 <!-- CONTACT -->
 <div class="container" id="contact"> <!--id contact-->
     <div class="row">
-        <div class="col-md-6 col-sm-6 mb-3">
+        <div class="col-md-6 col-sm-6 mb-3 flex-center flex-column">
             <!-- block for sm screens -->
             <div class="view d-none d-lg-block">
                 <img src="img/600.png" class="img-fluid" alt="">
@@ -446,8 +434,13 @@
             </div>
         </div>
         <!-- GOOGlE MAP -->
-        <div class="col-md-6 col-sm-6 mb-3">
-              <div id="map-container" class="" style="height: 100%"></div>
+        <div class="col-md-6 col-sm-6 mb-3" >
+            <div class="view">
+                <img src="img/600.png" class="img-fluid" alt="">
+                <div class="mask">
+                    <div id="map-container" style="height: 100%;"></div>
+                </div>
+            </div>
         </div>
         <!-- /google map -->
     </div>
