@@ -14,47 +14,93 @@
     <link href="css/mdb.min.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
+     <!-- Template styles -->
+    <style rel="stylesheet">
+        
+        html,
+        body,
+        .imghrad {
+            height: 100%;
+        }
+
+        .navbar {
+            background-color: transparent;
+        }
+        
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+        
+        .top-nav-collapse {
+            background-color: #f7f2e2;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                background-color: #f7f2e2;
+            }  
+        }
+
+        @media only screen and (max-width: 768px) {
+            .display-3 {
+                font-size: 3rem;
+                margin-top: 4rem;
+            }
+            h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        .imghrad {
+            background: url("img/1000.jpg")no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        
+    </style>
 </head>
 
 <body>
+      <!-- NAVBAR-->
+        <nav class="container navbar navbar-expand-lg navbar-light fixed-top scrolling-navbar sasha" id="menu"> <!-- id menu -->
+            
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="btn-iconGreyOlive m-1 mr-3" href="#aboutus">AboutUs<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn-iconGreyOlive m-1 mr-3" href="#team">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn-iconGreyOlive m-1 mr-3" href="#gallery">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn-iconGreyOlive m-1 mr-3" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            
+        </nav>
+    <!-- /navbar -->
 
-<div class="container p-0" id="menu"> <!-- id menu -->
-    <div class="row view">
-        <div class="col-md-12 mb-3 mt-3">
-            <img src="img/1000.jpg" class="img-fluid z-depth-1" alt="">
-            <!-- block for small screens -->
-            <div class="mask animated fadeIn d-none d-lg-block">
-                <div class="row mt-5">
-                    <div class="col text-center"><a class="fs-4 lead btn-textGreyOlive" href="#aboutus">AboutUs</a></div>
-                    <div class="col text-center"><a class="fs-4 lead btn-textGreyOlive" href="#team">Team</a></div>
-                    <div class="col"><img src="img/logo.png" class="img-fluid" alt=""></div>
-                    <div class="col text-center"><a class="fs-4 lead btn-textGreyOlive" href="#gallery">Gallery</a></div>
-                    <div class="col text-center"><a class="fs-4 lead btn-textGreyOlive" href="#contact">Contact</a></div>
-                </div>
+    <!-- MASK -->
+    <div class="imghrad container z-depth-1">
+        <div class="full-bg-img flex-center">
+            <div class="">
+               <img src="img/logo.png" class="img-fluid" alt="">
             </div>
-            <!-- look for small screens -->
-            <div class="mask animated fadeIn d-block d-lg-none">
-                <div class="d-none d-sm-block"><!-- block for xs screens -->
-                    <div class="row mt-5">
-                        <div class="col text-center m-2"><a class="fs-3 lead btn-textGreyOlive" href="#aboutus">AboutUs</a></div>
-                        <div class="col text-center m-2"><a class="fs-3 lead btn-textGreyOlive" href="#team">Team</a></div>
-                        <div class="col"><img src="img/logosmall.png" class="img-fluid" alt=""></div>
-                        <div class="col text-center m-2"><a class="fs-3 lead btn-textGreyOlive" href="#gallery">Gallery</a></div>
-                        <div class="col text-center m-2"><a class="fs-3 lead btn-textGreyOlive" href="#contact">Contact</a></div>
-                    </div>
-                </div>
-                <div class="d-block d-sm-none"><!-- look for xs screens -->
-                    <div class="text-center m-2">
-                        <a class="fs-3 lead btn-textGreyOlive" href="#aboutus">AboutUs</a><br>
-                        <a class="fs-3 lead btn-textGreyOlive" href="#team">Team</a> <br>
-                        <a class="fs-3 lead btn-textGreyOlive" href="#gallery">Gallery</a><br>
-                        <a class="fs-3 lead btn-textGreyOlive" href="#contact">Contact</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </div>      
     </div>
-</div>
+    <!-- /mask-->
 
 <!-- ABOUT US -->
 <div class="container" id="aboutus"> <!-- id aboutus -->
@@ -124,11 +170,11 @@
 <!-- TEAM -->
 <div class="container" id="team"> <!--id team-->
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3 flex-center flex-column">
             <div class="view">
                 <img src="img/4000.jpg" class="img-fluid" alt="">
                 <div class="mask d-flex justify-content-center">
-                    <!-- look for small screens -->
+                    <!-- block for small screens -->
                     <div class="align-self-center d-none d-lg-block">
                         <h1 class="frameTextBold text-center"><strong>TEAM</strong></h1>
                     </div>
@@ -139,16 +185,16 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3 flex-center flex-column">
             <img src="img/5000.jpg" class="img-fluid" alt="">
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3 flex-center flex-column">
             <div class="view">
                 <img src="img/300.png" class="img-fluid" alt="">
                 <div class="mask flex-center flex-column">
                     <h3 class="mb-3 d-none d-lg-block"><strong>COREY MILLER</strong></h3>
                     <h6 class="d-block d-lg-none"><strong>COREY MILLER</strong></h6>
-                    <!-- look for small screens -->
+                    <!-- block for small screens -->
                     <p class="text-center pl-2 pr-2 mb-3 d-none d-lg-block">
                         We embody your dreams of the perfect
                         with the help of colors, light and shadow,
@@ -158,7 +204,7 @@
                     <!-- look for small screens -->
                     <p class="text-center pl-2 pr-2 mb-1 fs-2 d-block d-lg-none">
                         We embody your dreams of the perfect
-                        with the help of colors, light and shadow,
+                        with the help of colors, light and shadow,<br>
                         using the most modern equipment
                         and our sensitive attitude and professionalism.
                     </p>
@@ -175,16 +221,16 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3 flex-center flex-column">
             <img src="img/6000.jpg" class="img-fluid" alt="">
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3 flex-center flex-column">
             <div class="view">
                 <img src="img/300.png" class="img-fluid" alt="">
                 <div class="mask flex-center flex-column">
                     <h3 class="mb-3 d-none d-lg-block"><strong>KAT VON D</strong></h3>
                     <h6 class="d-block d-lg-none"><strong>KAT VON D</strong></h6>
-                    <!-- look for small screens -->
+                    <!-- block for small screens -->
                     <p class="text-center pl-2 pr-2 mb-3 d-none d-lg-block">
                         We embody your dreams of the perfect
                         with the help of colors, light and shadow,
@@ -194,7 +240,7 @@
                     <!-- look for small screens -->
                     <p class="text-center pl-2 pr-2 mb-1 fs-2 d-block d-lg-none">
                         We embody your dreams of the perfect
-                        with the help of colors, light and shadow,
+                        with the help of colors, light and shadow,<br>
                         using the most modern equipment
                         and our sensitive attitude and professionalism.
                     </p>
@@ -208,11 +254,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 mb-3">
+        <div class="col-lg-4 col-md-4 col-sm-4 mb-3 flex-center flex-column">
             <div class="view">
                 <img src="img/200.png" class="img-fluid" alt="">
                 <div class="mask flex-center flex-column">
-                    <!-- look for small screens -->
+                    <!-- block for small screens -->
                     <form class="d-none d-lg-block">
                         <p>
                         <strong>NEWSLETTER</strong><br>
@@ -266,6 +312,11 @@
 </div>
 <!-- /team -->
 
+
+
+
+
+
 <!-- GALLERY -->
 <div class="container" id="gallery"> <!-- id gallery -->
     <div class="row">
@@ -273,7 +324,7 @@
             <div class="view">
                 <img src="img/300.png" class="img-fluid" alt="">
                 <div class="mask d-flex justify-content-center">
-                    <!-- look for small screens -->
+                    <!-- block for small screens -->
                     <div class="align-self-center d-none d-lg-block">
                         <h3 class="frameTextBold text-center"><strong>GALLERY</strong></h3>
                     </div>
